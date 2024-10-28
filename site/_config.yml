@@ -1,0 +1,24 @@
+title: Michael Lohier
+description: Backend Developer & DevOps Engineer specializing in API development, automation solutions, and AI integration.
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Build settings
+plugins:
+  - jekyll-bookshop
+  - jekyll-sitemap
+
+# Bookshop settings
+bookshop_locations:
+  - ../component-library
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - package.json
+  - package-lock.json
+
+collections_dir: collections
