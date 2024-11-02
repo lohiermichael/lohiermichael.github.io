@@ -14,6 +14,44 @@
 		padding: 30px 0 60px;
 	}
 
+  position: relative;
+
+  &__tech-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+
+    .tech-element {
+      position: absolute;
+      font-family: monospace;
+      color: $primary-color;
+      opacity: 0.3;
+      font-size: 24px;
+
+      &:nth-child(1) {
+        top: 20%;
+        left: -20px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      &:nth-child(2) {
+        top: 40%;
+        right: 10%;
+        animation: float 8s ease-in-out infinite;
+      }
+
+      &:nth-child(3) {
+        bottom: 30%;
+        left: 10%;
+        animation: float 7s ease-in-out infinite;
+      }
+    }
+  }
+
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -36,6 +74,7 @@
 		max-width: 510px;
 		padding-right: 20px;
 		margin-right: auto;
+    position: relative;
 
 		@media only screen and (max-width: $tablet) {
 			max-width: 100%;
@@ -181,6 +220,7 @@
 		width: 480px;
 		height: 520px;
 		margin-left: auto;
+    transition: transform 0.3s ease;
 
 		&::before {
 			content: "";
@@ -193,6 +233,26 @@
 			border-radius: 60px;
 			background: $blue-gray;
 		}
+
+     &-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at center,
+        rgba($primary-color, 0.2) 0%, // Increased opacity
+        transparent 70%
+      );
+      opacity: 0.7; // Increased opacity
+      transition: all 0.5s ease;
+      z-index: 2; // Increased z-index
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
 
 		img {
 			position: absolute;
@@ -209,3 +269,4 @@
 		}
 	}
 }
+
