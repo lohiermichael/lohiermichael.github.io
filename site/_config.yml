@@ -1,6 +1,6 @@
 baseurl: ""
 
-title: Michael Lohier | Portfolio
+title: Michael Lohier Portfolio
 
 plugins:
   - jekyll-bookshop
