@@ -11,6 +11,9 @@ on:
 
 jobs:
   build:
+    env:
+      FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }}
+
     runs-on: ubuntu-latest
 
     steps:
