@@ -1,1 +1,1 @@
-Sitemap: https://lohiermichael.github.io/sitemap.xml
+Sitemap: /https://lohiermichael.github.io/lohimichael.github.io/sitemap.xml
