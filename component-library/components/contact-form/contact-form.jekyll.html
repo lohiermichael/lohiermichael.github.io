@@ -11,7 +11,7 @@
             <p class="{{c}}__contact-description">{{ include.form_description }}</p>
           </div>
           <form class="{{c}}__form"
-            action="{{include.form_success_page}}"
+            action="https://formspree.io/f/{{ site.env.FORMSPREE_ID }}"
             method="POST">
             <input type="hidden" name="_to" value="{{include.form_submission_email}}">
             <div class="{{c}}__form-group">
