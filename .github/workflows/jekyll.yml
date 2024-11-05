@@ -15,27 +15,31 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.7'
         bundler-cache: true
-        
+
     - name: Install Jekyll Dependencies
       run: |
         cd site
         bundle install
-    
+
     - name: Build Bookshop
       run: |
         npm install
         npm run bookshop-hosted
-        
+
     - name: Build Jekyll Site
       run: |
-        BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll build --source site
-        
+        BUNDLE_GEMFILE=site/Gemfile \
+        bundle exec jekyll build \
+        --source site \
+        --config site/_config.yml \
+        --baseurl "https://lohiermichael.github.io/lohimichael.github.io"
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
