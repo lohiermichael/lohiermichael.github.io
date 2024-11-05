@@ -11,8 +11,6 @@ on:
 
 jobs:
   build:
-    env:
-      FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }}
 
     runs-on: ubuntu-latest
 
@@ -41,6 +39,8 @@ jobs:
         npm run bookshop-hosted
 
     - name: Build Jekyll Site
+      env:
+        FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }}
       run: |
         BUNDLE_GEMFILE=site/Gemfile \
         bundle exec jekyll build \

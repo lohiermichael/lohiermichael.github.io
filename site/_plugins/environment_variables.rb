@@ -5,10 +5,12 @@ module Jekyll
     def generate(site)
       site.config['env'] = {}
 
-      if Jekyll.env == "development"
-        load_local_env(site)
-      else
+      if ENV['GITHUB_ACTIONS']
+        # We're in GitHub Actions
         load_github_env(site)
+      else
+        # We're in local development
+        load_local_env(site)
       end
 
       log_available_variables(site)
@@ -22,13 +24,8 @@ module Jekyll
       
       if File.exist?(env_file)
         Dotenv.load(env_file)
-        ENV.each do |key, value|
-          site.config['env'][key] = value.to_s
-        end
-        Jekyll.logger.info(
-          "Environment:", 
-          "Loaded local .env file successfully"
-        )
+        copy_env_to_site_config(site)
+        Jekyll.logger.info("Environment:", "Loaded local .env file")
       else
         Jekyll.logger.warn(
           "Environment:",
@@ -38,24 +35,14 @@ module Jekyll
     end
 
     def load_github_env(site)
-      # List of expected environment variables
-      expected_vars = [
-        'FORMSPREE_ID',
-      ]
+      Jekyll.logger.info("Environment:", "Loading GitHub Actions variables")
+      copy_env_to_site_config(site)
+    end
 
-      expected_vars.each do |var|
-        if ENV[var]
-          site.config['env'][var] = ENV[var].to_s
-          Jekyll.logger.info(
-            "Environment:", 
-            "Loaded GitHub variable: #{var}"
-          )
-        else
-          Jekyll.logger.warn(
-            "Environment:",
-            "GitHub variable not found: #{var}"
-          )
-        end
+    def copy_env_to_site_config(site)
+      ENV.each do |key, value|
+        site.config['env'][key] = value.to_s
+        Jekyll.logger.info("Environment:", "Loaded: #{key}")
       end
     end
 
