@@ -3,40 +3,74 @@ require 'dotenv'
 module Jekyll
   class EnvironmentVariablesGenerator < Generator
     def generate(site)
-      # Load environment variables from root .env file 
+      site.config['env'] = {}
+
       if Jekyll.env == "development"
-        root_dir = File.expand_path('../../', File.dirname(__FILE__))
-        env_file = File.join(root_dir, '.env')
-        
-        if File.exist?(env_file)
-          Dotenv.load(env_file)
+        load_local_env(site)
+      else
+        load_github_env(site)
+      end
+
+      log_available_variables(site)
+    end
+
+    private
+
+    def load_local_env(site)
+      root_dir = File.expand_path('../../', File.dirname(__FILE__))
+      env_file = File.join(root_dir, '.env')
+      
+      if File.exist?(env_file)
+        Dotenv.load(env_file)
+        ENV.each do |key, value|
+          site.config['env'][key] = value.to_s
+        end
+        Jekyll.logger.info(
+          "Environment:", 
+          "Loaded local .env file successfully"
+        )
+      else
+        Jekyll.logger.warn(
+          "Environment:",
+          "Local .env file not found at: #{env_file}"
+        )
+      end
+    end
+
+    def load_github_env(site)
+      # List of expected environment variables
+      expected_vars = [
+        'FORMSPREE_ID',
+      ]
+
+      expected_vars.each do |var|
+        if ENV[var]
+          site.config['env'][var] = ENV[var].to_s
           Jekyll.logger.info(
             "Environment:", 
-            "Loaded .env file successfully"
-          )
-          Jekyll.logger.info(
-            "Environment:",
-            "FORMSPREE_ID is set to: #{ENV['FORMSPREE_ID']}"
+            "Loaded GitHub variable: #{var}"
           )
         else
           Jekyll.logger.warn(
             "Environment:",
-            ".env file not found at: #{env_file}"
+            "GitHub variable not found: #{var}"
           )
         end
       end
+    end
 
-      # Convert ENV to a hash that Liquid can handle
-      site.config['env'] = {}
-      ENV.each do |key, value|
-        site.config['env'][key] = value.to_s
+    def log_available_variables(site)
+      if site.config['env'].empty?
+        Jekyll.logger.warn(
+          "Environment:",
+          "No environment variables were loaded"
+        )
+      else
+        Jekyll.logger.info(
+          "Environment:",
+          "Available variables: #{site.config['env'].keys.join(', ')}"
+        )
       end
-      
-      # Debug output
-      Jekyll.logger.info(
-        "Environment:",
-        "Variables available in site.env: #{site.config['env'].keys.join(', ')}"
-      )
     end
   end
 end
