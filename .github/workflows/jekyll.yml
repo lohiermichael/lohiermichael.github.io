@@ -45,7 +45,7 @@ jobs:
         BUNDLE_GEMFILE=site/Gemfile \
         bundle exec jekyll build \
         --source site \
-        --config site/_config.yml \
+        --config site/_config.yml
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
