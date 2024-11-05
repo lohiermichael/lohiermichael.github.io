@@ -1,5 +1,8 @@
 name: Jekyll site CI
 
+permissions:
+  contents: write  # Grant write access to contents (necessary for deploying)
+
 on:
   push:
     branches: [ master ]
