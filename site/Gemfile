@@ -8,3 +8,11 @@ group :jekyll_plugins do
   gem 'jekyll-tagging', "1.1.0"
   gem "jekyll-sitemap", "1.4.0"
 end
+
+# Add GitHub Pages support
+gem "github-pages", group: :jekyll_plugins
+
+# Add any other required gems
+group :jekyll_plugins do
+  # Add theme-specific plugins here
+  end
