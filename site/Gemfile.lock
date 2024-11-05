@@ -5,6 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     colorator (1.1.0)
     concurrent-ruby (1.2.3)
+    dotenv (2.8.1)
     dry-inflector (0.3.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -76,6 +77,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv (~> 2.8)
   jekyll (= 4.3.3)
   jekyll-bookshop (= 3.9.0)
   jekyll-sitemap (= 1.4.0)
