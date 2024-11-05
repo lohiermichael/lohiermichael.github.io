@@ -21,8 +21,8 @@ jobs:
         
     - name: Build site
       run: |
-        bundle install
-        bundle exec jekyll build
+        BUNDLE_GEMFILE=site/Gemfile bundle install
+        BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll 
         
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
