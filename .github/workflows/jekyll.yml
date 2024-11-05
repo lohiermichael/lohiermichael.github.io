@@ -19,10 +19,19 @@ jobs:
         ruby-version: '2.7'
         bundler-cache: true
         
-    - name: Build site
+    - name: Install Jekyll Dependencies
       run: |
-        BUNDLE_GEMFILE=site/Gemfile bundle install
-        BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll 
+        cd site
+        bundle install
+    
+    - name: Build Bookshop
+      run: |
+        npm install
+        npm run bookshop-hosted
+        
+    - name: Build Jekyll Site
+      run: |
+        BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll build --source site
         
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
