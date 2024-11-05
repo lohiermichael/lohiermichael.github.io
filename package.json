@@ -1,7 +1,7 @@
 {
   "name": "vonge-jekyll-bookshop-template",
   "private": true,
-  "description": "Vonge template for CloudCannon",
+  "description": "Michael Freelancing Portfolio Website",
   "scripts": {
     "bookshop": "bookshop-browser",
     "jekyll:install": "BUNDLE_GEMFILE=site/Gemfile bundle install",
