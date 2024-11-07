@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: About Section
-  description: Section displaying information about yourself
+  label: About Tech Section
+  description: Section displaying developer introduction and tech stack
   icon: wysiwyg
   tags:
     - Text
@@ -16,7 +16,10 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   title: About Me
-  description_html: Add your description here
+  description_html: >-
+    <p><strong>Backend developer</strong> with 4 years of experience building
+    scalable solutions and automation tools. I specialize in creating efficient
+    systems that streamline business processes and enhance productivity.</p>
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs: {}

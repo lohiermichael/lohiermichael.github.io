@@ -1,19 +1,32 @@
 /* About */
-.c-about-section {
-  margin-bottom: 80px;
-  
+.c-about-section { $c: &;
+  .container {
+    position: relative;
+  }
+
   &__head {
-    margin-bottom: 40px;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 140px;
     text-align: center;
   }
 
   &__title {
+    display: inline-block;
     margin-bottom: 20px;
-    font-size: 48px;
+    font-size: 58px;
   }
 
   &__description {
-    max-width: 760px;
-    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+
+		@media only screen and (max-width: $mobile) {
+			font-size: 16px;
+		}
+
+    strong {
+      color: $heading-font-color;
+    }
   }
 }
