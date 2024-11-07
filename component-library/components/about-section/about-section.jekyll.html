@@ -13,11 +13,11 @@
 
         <div class="{{c}}__tech-grid">
 
-          <!-- Development Section -->
+          <!-- Backend Development Section -->
           <div class="{{c}}__category">
-            <h3 class="{{c}}__category-title">Development</h3>
+            <h3 class="{{c}}__category-title">{{ site.data.tech_stack.backend_development.title }}</h3>
             <div class="{{c}}__tech-list">
-              {% for tech in site.data.tech_stack.development %}
+              {% for tech in site.data.tech_stack.backend_development.technologies %}
                 <div class="{{c}}__tech-item">
                   <div class="{{c}}__tech-icon">
                     <div class="{{c}}__tech-front">
@@ -33,11 +33,31 @@
             </div>
           </div>
 
-          <!-- Data & Analytics Section -->
+          <!-- Web Development Section -->
           <div class="{{c}}__category">
-            <h3 class="{{c}}__category-title">Data Analytics</h3>
+            <h3 class="{{c}}__category-title">{{ site.data.tech_stack.web_development.title }}</h3>
             <div class="{{c}}__tech-list">
-              {% for tech in site.data.tech_stack.data_analytics %}
+              {% for tech in site.data.tech_stack.web_development.technologies %}
+                <div class="{{c}}__tech-item">
+                  <div class="{{c}}__tech-icon">
+                    <div class="{{c}}__tech-front">
+                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                    </div>
+                    <div class="{{c}}__tech-back">
+                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                      <div class="tech-description">{{ tech.description }}</div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Infrastructure Section -->
+          <div class="{{c}}__category">
+            <h3 class="{{c}}__category-title">{{ site.data.tech_stack.infrastructure.title }}</h3>
+            <div class="{{c}}__tech-list">
+              {% for tech in site.data.tech_stack.infrastructure.technologies %}
                 <div class="{{c}}__tech-item">
                   <div class="{{c}}__tech-icon">
                     <div class="{{c}}__tech-front">

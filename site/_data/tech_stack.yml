@@ -1,30 +1,50 @@
-development:
-  - name: Python
-    icon: python.svg
-    description: Python - My language of expertise
-  - name: Django
-    icon: django.svg
-    description: Django - To build scalable REST APIs
-  - name: Flask
-    icon: flask.svg
-    description: Flask - To build lightweight APIs
-  - name: JavaScript
-    icon: javascript.svg
-    description: JavaScript - Frontend development and Node.js backends
-  - name: Angular
-    icon: angular.svg
-    description: Angular - The JS framework I worked the most with
+backend_development:
+ title: "Backend Development & APIs"
+ technologies:
+   - name: Python
+     icon: python.svg
+     description: "Python - My primary language and expertise (5+ years)"
+   - name: Django
+     icon: django.svg 
+     description: "Django - My go-to framework for building robust REST APIs"
+   - name: Flask
+     icon: flask.svg
+     description: "Fask - My choice for lightweight APIs"
+   - name: PostgreSQL
+     icon: postgresql.svg
+     description: "PostgreSQL - My preferred database for complex applications"
+   - name: MongoDB
+     icon: mongodb.svg
+     description: "MongoDB - My NoSQL database for flexible data structures"
 
-devops:
-  - name: Docker
-    icon: docker.svg
-    description: Containerization and deployment
-  - name: AWS
-    icon: aws.svg
-    description: Cloud infrastructure and services
-  - name: GCP
-    icon: gcp.svg
-    description: Cloud platform and services
-  - name: Git
-    icon: git.svg
-    description: Version control and collaboration
+web_development:
+ title: "Web Development"
+ technologies:
+   - name: JavaScript
+     icon: javascript.svg
+     description: "JavaScript - My core language for full-stack development"
+   - name: TypeScript
+     icon: typescript.svg
+     description: "TypeScript - My foundation for type-safe frontend development"
+   - name: Angular
+     icon: angular.svg
+     description: "Angular - Professional experience building enterprise apps"
+   - name: React
+     icon: react.svg
+     description: "React - Currently specializing in modern web interfaces"
+
+infrastructure:
+ title: "Infrastructure & DevOps"
+ technologies:
+   - name: Docker
+     icon: docker.svg
+     description: "Docker - My standard for containerized deployments"
+   - name: AWS
+     icon: aws.svg
+     description: "AWS - My cloud platform of choice for scalable solutions"
+   - name: Git
+     icon: git.svg
+     description: "Git - My daily driver for version control and collaboration"
+   - name: GitHub
+     icon: github.svg
+     description: "GitHub - My platform for CI/CD with Actions"
