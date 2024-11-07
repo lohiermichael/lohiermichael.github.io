@@ -1,0 +1,30 @@
+development:
+  - name: Python
+    icon: python.svg
+    description: Python - My language of expertise
+  - name: Django
+    icon: django.svg
+    description: Django - To build scalable REST APIs
+  - name: Flask
+    icon: flask.svg
+    description: Flask - To build lightweight APIs
+  - name: JavaScript
+    icon: javascript.svg
+    description: JavaScript - Frontend development and Node.js backends
+  - name: Angular
+    icon: angular.svg
+    description: Angular - The JS framework I worked the most with
+
+devops:
+  - name: Docker
+    icon: docker.svg
+    description: Containerization and deployment
+  - name: AWS
+    icon: aws.svg
+    description: Cloud infrastructure and services
+  - name: GCP
+    icon: gcp.svg
+    description: Cloud platform and services
+  - name: Git
+    icon: git.svg
+    description: Version control and collaboration

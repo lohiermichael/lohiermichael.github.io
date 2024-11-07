@@ -3,11 +3,56 @@
   <div class="container">
     <div class="row">
       <div class="col col-12">
+
         <div class="{{c}}__head">
           <h2 class="{{c}}__title">{{ include.title }}</h2>
           <div class="{{c}}__description">
             {{ include.description_html }}
           </div>
+        </div>
+
+        <div class="{{c}}__tech-grid">
+
+          <!-- Development Section -->
+          <div class="{{c}}__category">
+            <h3 class="{{c}}__category-title">Development</h3>
+            <div class="{{c}}__tech-list">
+              {% for tech in site.data.tech_stack.development %}
+                <div class="{{c}}__tech-item">
+                  <div class="{{c}}__tech-icon">
+                    <div class="{{c}}__tech-front">
+                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                    </div>
+                    <div class="{{c}}__tech-back">
+                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                      <div class="tech-description">{{ tech.description }}</div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Data & Analytics Section -->
+          <div class="{{c}}__category">
+            <h3 class="{{c}}__category-title">Data Analytics</h3>
+            <div class="{{c}}__tech-list">
+              {% for tech in site.data.tech_stack.data_analytics %}
+                <div class="{{c}}__tech-item">
+                  <div class="{{c}}__tech-icon">
+                    <div class="{{c}}__tech-front">
+                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                    </div>
+                    <div class="{{c}}__tech-back">
+                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                      <div class="tech-description">{{ tech.description }}</div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
