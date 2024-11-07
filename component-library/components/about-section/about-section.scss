@@ -1,0 +1,19 @@
+/* About */
+.c-about-section {
+  margin-bottom: 80px;
+  
+  &__head {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+  }
+
+  &__description {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
