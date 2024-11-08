@@ -76,6 +76,10 @@
     @media only screen and (max-width: $mobile) {
       max-width: 100px;
     }
+
+    &:hover {
+      z-index: 10; // Bring hovered card to front
+    }
   }
 
   &__tech-icon {
@@ -88,7 +92,7 @@
     cursor: pointer;
 
     &:hover {
-      transform: rotateY(180deg);
+      transform: rotateY(180deg) scale(1.1);
     }
   }
 
@@ -103,6 +107,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: box-shadow 0.3s ease; // Added transition for shadow
   }
 
   &__tech-front {
@@ -139,11 +144,12 @@
   &__tech-back {
     transform: rotateY(180deg);
     padding: 12px;
-    background: rgba($background-color-alt, 0.95);
+    background: rgba($background-color-alt, 0.98);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Added shadow for depth
     
     &::before {
       content: "";
@@ -169,10 +175,12 @@
     .tech-description {
       position: relative;
       color: $heading-font-color;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
-      line-height: 1.4;
+      line-height: 1.2;
       z-index: 2;
+      padding: 4px;
+      overflow: visible;
     }
   }
 }
