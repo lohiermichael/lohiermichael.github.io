@@ -1,0 +1,23 @@
+github:
+  title: GitHub
+  url: https://github.com/lohiermichael
+  local_link: github.svg
+  icon_class: github
+  aria_label: View GitHub Profile
+  tooltip: Check out my open source projects
+
+linkedin:
+  title: LinkedIn
+  url: https://linkedin.com/in/lohiermichael
+  local_link: linkedin.svg
+  icon_class: linkedin
+  aria_label: View LinkedIn Profile
+  tooltip: View my professional experience
+
+resume:
+  title: Resume
+  url: /resume.pdf
+  local_link: resume.svg
+  icon_class: resume
+  aria_label: Download Resume
+  tooltip: Download my detailed resume

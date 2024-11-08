@@ -74,6 +74,27 @@
           </div>
 
         </div>
+
+        <div class="{{c}}__quick-actions">
+          <p class="{{c}}__quick-actions-intro">You can also check out...</p>
+          <div class="{{c}}__quick-actions-grid">
+            {% for action in site.data.quick_actions %}
+            {% assign action_data = action[1] %}
+            <a
+              href="{{ action_data.url }}"
+              class="{{c}}__action-button"
+              aria-label="{{ action_data.aria_label }}"
+              target="_blank"
+            >
+              <img
+                src="{{ site.baseurl }}/images/quick-actions/{{ action_data.local_link }}"
+                alt="" class="icon"
+              >
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

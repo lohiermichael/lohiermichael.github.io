@@ -38,7 +38,7 @@
 
   &__category {
     margin-bottom: 60px;
-    
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -72,7 +72,7 @@
     max-width: 120px;
     aspect-ratio: 1;
     perspective: 1000px; // For 3D effect
-    
+
     @media only screen and (max-width: $mobile) {
       max-width: 100px;
     }
@@ -112,7 +112,7 @@
 
   &__tech-front {
     padding: 20px;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -150,7 +150,7 @@
     justify-content: center;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Added shadow for depth
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -183,4 +183,98 @@
       overflow: visible;
     }
   }
+
+  &__quick-actions {
+    position: relative;
+    max-width: 600px;
+    margin: 80px auto 0;
+    text-align: center;
+    padding: 0 20px;
+
+   &-intro {
+      font-size: 20px;
+      color: $heading-font-color;
+      margin-bottom: 32px;
+      font-weight: 700;
+      
+      @media only screen and (max-width: $mobile) {
+        font-size: 18px;
+      }
+    }
+
+    &-grid {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+
+      @media only screen and (max-width: $mobile) {
+        gap: 24px;
+      }
+    }
+  }
+
+  &__action-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+
+    .icon {
+      transition: transform 0.3s ease;
+    }
+
+    // Base size increase (1.5x from 48px = 72px)
+    .icon {
+      width: 72px;
+      height: 72px;
+    }
+
+    // GitHub-specific (slightly larger to compensate for whitespace)
+    &:nth-child(1) .icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    // LinkedIn (standard size)
+    &:nth-child(2) .icon {
+      width: 72px;
+      height: 72px;
+    }
+
+    // Resume (slightly smaller since it's more compact)
+    &:nth-child(3) .icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      .icon {
+        transform: scale(1.1);
+      }
+    }
+
+    @media only screen and (max-width: $mobile) {
+      // Mobile adjustments (maintaining proportions)
+      .icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      &:nth-child(1) .icon {
+        width: 68px;
+        height: 68px;
+      }
+
+      &:nth-child(2) .icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      &:nth-child(3) .icon {
+        width: 52px;
+        height: 52px;
+      }
+    }
+ }
 }
