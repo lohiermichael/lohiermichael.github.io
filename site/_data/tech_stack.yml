@@ -9,7 +9,7 @@ backend_development:
      description: "Django - My go-to framework for building robust REST APIs"
    - name: Flask
      icon: flask.svg
-     description: "Fask - My choice for lightweight APIs"
+     description: "Flask - My choice for lightweight APIs"
    - name: PostgreSQL
      icon: postgresql.svg
      description: "PostgreSQL - My preferred database for complex applications"
