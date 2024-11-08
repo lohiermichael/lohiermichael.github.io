@@ -3,98 +3,99 @@
   <div class="container">
     <div class="row">
       <div class="col col-12">
+        <div class="contaniner__inner animate">
 
-        <div class="{{c}}__head">
-          <h2 class="{{c}}__title">{{ include.title }}</h2>
-          <div class="{{c}}__description">
-            {{ include.description_html }}
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">{{ include.title }}</h2>
+            </div>
+            <div class="section__description">{{ include.description_html }}</div>
           </div>
-        </div>
 
-        <div class="{{c}}__tech-grid">
+          <div class="{{c}}__tech-grid">
 
-          <!-- Backend Development Section -->
-          <div class="{{c}}__category">
-            <h3 class="{{c}}__category-title">{{ site.data.tech_stack.backend_development.title }}</h3>
-            <div class="{{c}}__tech-list">
-              {% for tech in site.data.tech_stack.backend_development.technologies %}
-                <div class="{{c}}__tech-item">
-                  <div class="{{c}}__tech-icon">
-                    <div class="{{c}}__tech-front">
-                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
-                    </div>
-                    <div class="{{c}}__tech-back">
-                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
-                      <div class="tech-description">{{ tech.description }}</div>
+            <!-- Backend Development Section -->
+            <div class="{{c}}__category">
+              <h3 class="{{c}}__category-title">{{ site.data.tech_stack.backend_development.title }}</h3>
+              <div class="{{c}}__tech-list">
+                {% for tech in site.data.tech_stack.backend_development.technologies %}
+                  <div class="{{c}}__tech-item">
+                    <div class="{{c}}__tech-icon">
+                      <div class="{{c}}__tech-front">
+                        <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                      </div>
+                      <div class="{{c}}__tech-back">
+                        <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                        <div class="tech-description">{{ tech.description }}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% endfor %}
+                {% endfor %}
+              </div>
             </div>
-          </div>
 
-          <!-- Web Development Section -->
-          <div class="{{c}}__category">
-            <h3 class="{{c}}__category-title">{{ site.data.tech_stack.web_development.title }}</h3>
-            <div class="{{c}}__tech-list">
-              {% for tech in site.data.tech_stack.web_development.technologies %}
-                <div class="{{c}}__tech-item">
-                  <div class="{{c}}__tech-icon">
-                    <div class="{{c}}__tech-front">
-                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
-                    </div>
-                    <div class="{{c}}__tech-back">
-                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
-                      <div class="tech-description">{{ tech.description }}</div>
+            <!-- Web Development Section -->
+            <div class="{{c}}__category">
+              <h3 class="{{c}}__category-title">{{ site.data.tech_stack.web_development.title }}</h3>
+              <div class="{{c}}__tech-list">
+                {% for tech in site.data.tech_stack.web_development.technologies %}
+                  <div class="{{c}}__tech-item">
+                    <div class="{{c}}__tech-icon">
+                      <div class="{{c}}__tech-front">
+                        <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                      </div>
+                      <div class="{{c}}__tech-back">
+                        <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                        <div class="tech-description">{{ tech.description }}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% endfor %}
+                {% endfor %}
+              </div>
             </div>
-          </div>
 
-          <!-- Infrastructure Section -->
-          <div class="{{c}}__category">
-            <h3 class="{{c}}__category-title">{{ site.data.tech_stack.infrastructure.title }}</h3>
-            <div class="{{c}}__tech-list">
-              {% for tech in site.data.tech_stack.infrastructure.technologies %}
-                <div class="{{c}}__tech-item">
-                  <div class="{{c}}__tech-icon">
-                    <div class="{{c}}__tech-front">
-                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
-                    </div>
-                    <div class="{{c}}__tech-back">
-                      <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
-                      <div class="tech-description">{{ tech.description }}</div>
+            <!-- Infrastructure Section -->
+            <div class="{{c}}__category">
+              <h3 class="{{c}}__category-title">{{ site.data.tech_stack.infrastructure.title }}</h3>
+              <div class="{{c}}__tech-list">
+                {% for tech in site.data.tech_stack.infrastructure.technologies %}
+                  <div class="{{c}}__tech-item">
+                    <div class="{{c}}__tech-icon">
+                      <div class="{{c}}__tech-front">
+                        <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                      </div>
+                      <div class="{{c}}__tech-back">
+                        <img src="/images/tech/{{tech.icon}}" alt="{{tech.name}}">
+                        <div class="tech-description">{{ tech.description }}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% endfor %}
+                {% endfor %}
+              </div>
             </div>
+
           </div>
 
-        </div>
-
-        <div class="{{c}}__quick-actions">
-          <p class="{{c}}__quick-actions-intro">You can also check out...</p>
-          <div class="{{c}}__quick-actions-grid">
-            {% for action in site.data.quick_actions %}
-            {% assign action_data = action[1] %}
-            <a
-              href="{{ action_data.url }}"
-              class="{{c}}__action-button"
-              aria-label="{{ action_data.aria_label }}"
-              target="_blank"
-            >
-              <img
-                src="{{ site.baseurl }}/images/quick-actions/{{ action_data.local_link }}"
-                alt="" class="icon"
+          <div class="{{c}}__quick-actions">
+            <p class="{{c}}__quick-actions-intro">You can also check out...</p>
+            <div class="{{c}}__quick-actions-grid">
+              {% for action in site.data.quick_actions %}
+              {% assign action_data = action[1] %}
+              <a
+                href="{{ action_data.url }}"
+                class="{{c}}__action-button"
+                aria-label="{{ action_data.aria_label }}"
+                target="_blank"
               >
-            </a>
-            {% endfor %}
+                <img
+                  src="{{ site.baseurl }}/images/quick-actions/{{ action_data.local_link }}"
+                  alt="" class="icon"
+                >
+              </a>
+              {% endfor %}
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>

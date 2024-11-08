@@ -4,35 +4,7 @@
     position: relative;
   }
 
-  &__head {
-    max-width: 760px;
-    margin: 0 auto;
-    padding-top: 140px;
-    text-align: center;
-  }
-
-  &__title {
-    display: inline-block;
-    margin-bottom: 40px;
-    font-size: 58px;
-  }
-
-  &__description {
-    font-size: 20px;
-    font-weight: 600;
-
-		@media only screen and (max-width: $mobile) {
-			font-size: 16px;
-		}
-
-    strong {
-      color: $heading-font-color;
-    }
-  }
-
   &__tech-grid {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 40px 0;
   }
 
@@ -48,7 +20,6 @@
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 30px;
-    text-align: center;
     color: $heading-font-color;
     @media only screen and (max-width: $mobile) {
       font-size: 20px;
@@ -56,12 +27,9 @@
   }
 
   &__tech-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    display: flex;
     gap: 30px;
-    justify-items: center;
     @media only screen and (max-width: $tablet) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 20px;
     }
   }
@@ -185,26 +153,16 @@
   }
 
   &__quick-actions {
-    position: relative;
-    max-width: 600px;
-    margin: 80px auto 0;
-    text-align: center;
-    padding: 0 20px;
+    margin-top: 50px;
 
    &-intro {
-      font-size: 20px;
       color: $heading-font-color;
-      margin-bottom: 32px;
-      font-weight: 700;
+      margin-bottom: 16px;
       
-      @media only screen and (max-width: $mobile) {
-        font-size: 18px;
-      }
     }
 
     &-grid {
       display: flex;
-      justify-content: center;
       gap: 60px;
 
       @media only screen and (max-width: $mobile) {
@@ -223,58 +181,58 @@
       transition: transform 0.3s ease;
     }
 
-    // Base size increase (1.5x from 48px = 72px)
+    // Base size decrease (0.75x from 72px = 54px)
     .icon {
-      width: 72px;
-      height: 72px;
+      width: 54px;
+      height: 54px;
     }
 
     // GitHub-specific (slightly larger to compensate for whitespace)
     &:nth-child(1) .icon {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
     }
 
     // LinkedIn (standard size)
     &:nth-child(2) .icon {
-      width: 72px;
-      height: 72px;
+      width: 54px;
+      height: 54px;
     }
 
     // Resume (slightly smaller since it's more compact)
     &:nth-child(3) .icon {
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
     }
 
     &:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1.5px);
       .icon {
-        transform: scale(1.1);
+        transform: scale(1.1); // Keeping the hover scale effect the same
       }
     }
 
     @media only screen and (max-width: $mobile) {
       // Mobile adjustments (maintaining proportions)
       .icon {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
       }
 
       &:nth-child(1) .icon {
-        width: 68px;
-        height: 68px;
+        width: 51px;
+        height: 51px;
       }
 
       &:nth-child(2) .icon {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
       }
 
       &:nth-child(3) .icon {
-        width: 52px;
-        height: 52px;
+        width: 39px;
+        height: 39px;
       }
     }
- }
+  }
 }
