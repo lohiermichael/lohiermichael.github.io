@@ -28,6 +28,7 @@
 
   &__tech-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     @media only screen and (max-width: $tablet) {
       gap: 20px;
@@ -42,7 +43,7 @@
     perspective: 1000px; // For 3D effect
 
     @media only screen and (max-width: $mobile) {
-      max-width: 100px;
+      max-width: 110px;
     }
 
     &:hover {
