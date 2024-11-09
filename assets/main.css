@@ -3247,6 +3247,7 @@
 @media all, bookshop {
   .c-about-section__tech-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -3266,7 +3267,7 @@
 }
 @media only screen and (max-width: 576px) {
   .c-about-section__tech-item {
-    max-width: 100px;
+    max-width: 110px;
   }
 }
 @media all, bookshop {
@@ -3284,6 +3285,14 @@
   }
   .c-about-section__tech-icon:hover {
     transform: rotateY(180deg) scale(1.1);
+  }
+  .c-about-section__tech-icon:hover .c-about-section__tech-front {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .c-about-section__tech-icon:hover .c-about-section__tech-back {
+    opacity: 1;
+    pointer-events: auto;
   }
   .c-about-section__tech-front, .c-about-section__tech-back {
     position: absolute;
