@@ -62,6 +62,16 @@
 
     &:hover {
       transform: rotateY(180deg) scale(1.1);
+
+      #{$c}__tech-front {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #{$c}__tech-back {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 
