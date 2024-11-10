@@ -12,6 +12,7 @@ spec:
 blueprint:
   title: ""
   description_html: ""
+  tech_stack: site.data.tech_stack
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:

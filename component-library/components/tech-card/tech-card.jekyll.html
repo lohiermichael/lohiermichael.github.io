@@ -1,0 +1,22 @@
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="{{site.baseurl}}/images/tech/{{include.tech.icon}}" 
+             alt="{{include.tech.name}}" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="{{site.baseurl}}/images/tech/{{include.tech.icon}}" 
+             alt="{{include.tech.name}}" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          {{ include.tech.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

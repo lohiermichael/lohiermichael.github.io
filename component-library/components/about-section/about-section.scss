@@ -1,11 +1,7 @@
 /* About */
-.c-about-section { $c: &;
+.about {
   .container {
     position: relative;
-  }
-
-  &__tech-grid {
-    padding: 40px 0;
   }
 
   &__category {
@@ -26,150 +22,12 @@
     }
   }
 
-  &__tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    @media only screen and (max-width: $tablet) {
-      gap: 20px;
-    }
-  }
-
-  &__tech-item {
-    position: relative;
-    width: 100%;
-    max-width: 120px;
-    aspect-ratio: 1;
-    perspective: 1000px; // For 3D effect
-
-    @media only screen and (max-width: $mobile) {
-      max-width: 110px;
-    }
-
-    &:hover {
-      z-index: 10; // Bring hovered card to front
-    }
-  }
-
-  &__tech-icon {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 12px;
-    cursor: pointer;
-
-    &:hover {
-      transform: rotateY(180deg) scale(1.1);
-
-      #{$c}__tech-front {
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      #{$c}__tech-back {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    }
-  }
-
-  &__tech-front,
-  &__tech-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    background: $background-color-alt;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: box-shadow 0.3s ease; // Added transition for shadow
-  }
-
-  &__tech-front {
-    padding: 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, $primary-color 0%, $secondary-color 167%);
-      opacity: 0;
-      transition: opacity 0.35s;
-      z-index: 1;
-      border-radius: 12px;
-    }
-
-    &:hover::before {
-      opacity: 0.1;
-    }
-
-    img {
-      position: relative;
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      z-index: 2;
-      transition: transform 0.3s ease;
-    }
-  }
-
-  &__tech-back {
-    transform: rotateY(180deg);
-    padding: 12px;
-    background: rgba($background-color-alt, 0.98);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); // Added shadow for depth
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, $primary-color 0%, $secondary-color 167%);
-      opacity: 0.1;
-      border-radius: 12px;
-    }
-
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      opacity: 0.1;
-      filter: grayscale(100%);
-    }
-
-    .tech-description {
-      position: relative;
-      color: $heading-font-color;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 1.2;
-      z-index: 2;
-      padding: 4px;
-      overflow: visible;
-    }
-  }
-
   &__quick-actions {
     margin-top: 50px;
 
-   &-intro {
+    &-intro {
       color: $heading-font-color;
       margin-bottom: 16px;
-      
     }
 
     &-grid {
@@ -192,25 +50,25 @@
       transition: transform 0.3s ease;
     }
 
-    // Base size decrease (0.75x from 72px = 54px)
+    // Base size decrease
     .icon {
       width: 54px;
       height: 54px;
     }
 
-    // GitHub-specific (slightly larger to compensate for whitespace)
+    // GitHub-specific
     &:nth-child(1) .icon {
       width: 60px;
       height: 60px;
     }
 
-    // LinkedIn (standard size)
+    // LinkedIn
     &:nth-child(2) .icon {
       width: 54px;
       height: 54px;
     }
 
-    // Resume (slightly smaller since it's more compact)
+    // Resume
     &:nth-child(3) .icon {
       width: 48px;
       height: 48px;
@@ -219,12 +77,11 @@
     &:hover {
       transform: translateY(-1.5px);
       .icon {
-        transform: scale(1.1); // Keeping the hover scale effect the same
+        transform: scale(1.1);
       }
     }
 
     @media only screen and (max-width: $mobile) {
-      // Mobile adjustments (maintaining proportions)
       .icon {
         width: 45px;
         height: 45px;
