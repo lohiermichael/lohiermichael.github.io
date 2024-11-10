@@ -558,7 +558,9 @@
   /* Disqus comments */
   /* Project */
   /* Project Navigation */
-  /* About */ /* Posts List */ /* Button */ /* Contact Form */ /* Hero */ /* Newsletter */ /* Page Heading */ /* Posts List */ /* Projects List */ /* Testimonials Section */
+  /* About */ /* Posts List */ /* Button */ /* Contact Form */ /* Hero */ /* Newsletter */ /* Page Heading */ /* Posts List */ /* Projects List */ /* Tech Card */
+  /* Responsive grid classes remain the same */
+  /* Testimonials Section */
 }
 @media only screen and (max-width: 1300px) {
   .container {
@@ -3220,19 +3222,16 @@
   }
 }
 @media all, bookshop {
-  .c-about-section .container {
+  .about .container {
     position: relative;
   }
-  .c-about-section__tech-grid {
-    padding: 40px 0;
-  }
-  .c-about-section__category {
+  .about__category {
     margin-bottom: 60px;
   }
-  .c-about-section__category:last-child {
+  .about__category:last-child {
     margin-bottom: 0;
   }
-  .c-about-section__category-title {
+  .about__category-title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -3240,202 +3239,75 @@
   }
 }
 @media only screen and (max-width: 576px) {
-  .c-about-section__category-title {
+  .about__category-title {
     font-size: 20px;
   }
 }
 @media all, bookshop {
-  .c-about-section__tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .c-about-section__tech-list {
-    gap: 20px;
-  }
-}
-@media all, bookshop {
-  .c-about-section__tech-item {
-    position: relative;
-    width: 100%;
-    max-width: 120px;
-    aspect-ratio: 1;
-    perspective: 1000px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .c-about-section__tech-item {
-    max-width: 110px;
-  }
-}
-@media all, bookshop {
-  .c-about-section__tech-item:hover {
-    z-index: 10;
-  }
-  .c-about-section__tech-icon {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-  .c-about-section__tech-icon:hover {
-    transform: rotateY(180deg) scale(1.1);
-  }
-  .c-about-section__tech-icon:hover .c-about-section__tech-front {
-    opacity: 0;
-    pointer-events: none;
-  }
-  .c-about-section__tech-icon:hover .c-about-section__tech-back {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .c-about-section__tech-front, .c-about-section__tech-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: box-shadow 0.3s ease;
-  }
-  .c-about-section__tech-front {
-    padding: 20px;
-  }
-  .c-about-section__tech-front::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
-    opacity: 0;
-    transition: opacity 0.35s;
-    z-index: 1;
-    border-radius: 12px;
-  }
-  .c-about-section__tech-front:hover::before {
-    opacity: 0.1;
-  }
-  .c-about-section__tech-front img {
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    z-index: 2;
-    transition: transform 0.3s ease;
-  }
-  .c-about-section__tech-back {
-    transform: rotateY(180deg);
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.98);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  .c-about-section__tech-back::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
-    opacity: 0.1;
-    border-radius: 12px;
-  }
-  .c-about-section__tech-back img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.1;
-    filter: grayscale(100%);
-  }
-  .c-about-section__tech-back .tech-description {
-    position: relative;
-    color: #110E38;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.2;
-    z-index: 2;
-    padding: 4px;
-    overflow: visible;
-  }
-  .c-about-section__quick-actions {
+  .about__quick-actions {
     margin-top: 50px;
   }
-  .c-about-section__quick-actions-intro {
+  .about__quick-actions-intro {
     color: #110E38;
     margin-bottom: 16px;
   }
-  .c-about-section__quick-actions-grid {
+  .about__quick-actions-grid {
     display: flex;
     gap: 60px;
   }
 }
 @media only screen and (max-width: 576px) {
-  .c-about-section__quick-actions-grid {
+  .about__quick-actions-grid {
     gap: 24px;
   }
 }
 @media all, bookshop {
-  .c-about-section__action-button {
+  .about__action-button {
     display: flex;
     align-items: center;
     gap: 8px;
     transition: transform 0.3s ease;
   }
-  .c-about-section__action-button .icon {
+  .about__action-button .icon {
     transition: transform 0.3s ease;
   }
-  .c-about-section__action-button .icon {
+  .about__action-button .icon {
     width: 54px;
     height: 54px;
   }
-  .c-about-section__action-button:nth-child(1) .icon {
+  .about__action-button:nth-child(1) .icon {
     width: 60px;
     height: 60px;
   }
-  .c-about-section__action-button:nth-child(2) .icon {
+  .about__action-button:nth-child(2) .icon {
     width: 54px;
     height: 54px;
   }
-  .c-about-section__action-button:nth-child(3) .icon {
+  .about__action-button:nth-child(3) .icon {
     width: 48px;
     height: 48px;
   }
-  .c-about-section__action-button:hover {
+  .about__action-button:hover {
     transform: translateY(-1.5px);
   }
-  .c-about-section__action-button:hover .icon {
+  .about__action-button:hover .icon {
     transform: scale(1.1);
   }
 }
 @media only screen and (max-width: 576px) {
-  .c-about-section__action-button .icon {
+  .about__action-button .icon {
     width: 45px;
     height: 45px;
   }
-  .c-about-section__action-button:nth-child(1) .icon {
+  .about__action-button:nth-child(1) .icon {
     width: 51px;
     height: 51px;
   }
-  .c-about-section__action-button:nth-child(2) .icon {
+  .about__action-button:nth-child(2) .icon {
     width: 45px;
     height: 45px;
   }
-  .c-about-section__action-button:nth-child(3) .icon {
+  .about__action-button:nth-child(3) .icon {
     width: 39px;
     height: 39px;
   }
@@ -4420,6 +4292,106 @@
     color: #fff;
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.165, 0.85, 0.45, 1), opacity 0.4s cubic-bezier(0.165, 0.85, 0.45, 1);
+  }
+  .c-tech-card {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .c-tech-card__content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    border-radius: 16px;
+    transform: translate(0);
+    overflow: hidden;
+  }
+  .c-tech-card__icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  .c-tech-card__icon:hover {
+    transform: rotateY(180deg);
+  }
+  .c-tech-card__front, .c-tech-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .c-tech-card__front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 60px;
+  }
+  .c-tech-card__back {
+    transform: rotateY(180deg);
+    /* Replace the strong gradient with a more subtle background */
+    background: rgba(20, 149, 167, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(20, 149, 167, 0.2);
+    /* Add a subtle hover effect */
+    transition: background-color 0.3s ease;
+  }
+  .c-tech-card__back:hover {
+    background: rgba(20, 149, 167, 0.15);
+  }
+  .c-tech-card__back img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.1;
+    filter: grayscale(100%);
+    max-width: 60px;
+  }
+  .c-tech-card__description {
+    position: relative;
+    /* Change text color to be less stark */
+    color: #110E38;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    z-index: 2;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .col-3 {
+    width: 25%;
+  }
+}
+@media (max-width: 1024px), bookshop and (max-width: 1024px) {
+  .col-3 {
+    width: 33.33%;
+  }
+}
+@media (max-width: 768px), bookshop and (max-width: 768px) {
+  .col-3 {
+    width: 50%;
+  }
+}
+@media (max-width: 576px), bookshop and (max-width: 576px) {
+  .col-3 {
+    width: 100%;
+  }
+}
+@media all, bookshop {
+  .about__category .row {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 120px;
   }
   .c-testimonial-card__content {
     width: 100%;

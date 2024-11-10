@@ -82,7 +82,7 @@
   <!-- Article specific (if it's a blog post) -->
   
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2024-11-09T12:53:06+00:00">
+  <meta property="article:published_time" content="2024-11-10T11:25:18+00:00">
   
 
   <!-- WhatsApp specific -->
@@ -267,13 +267,12 @@
 <!--bookshop-live end-->
 
     <!--bookshop-live name(about-section/about-section.jekyll.html) params(bind=block) context(block=content_blocks[1]) -->
-
-<section class="c-about-section" id="about">
+<!-- begin about -->
+<section class="section about" id="about">
   <div class="container">
     <div class="row">
       <div class="col col-12">
         <div class="contaniner__inner animate">
-
           <div class="section__info">
             <div class="section__head">
               <h2 class="section__title">About Me</h2>
@@ -281,231 +280,394 @@
             <div class="section__description"><p><strong>Backend developer</strong> with <strong>4 years</strong> of experience in the industry. I specialize in creating efficient systems that streamline business processes and enhance productivity.</p></div>
           </div>
 
-          <div class="c-about-section__tech-grid">
+          <!-- Here was the problem: Incorrect iteration and access of tech stack data -->
+          
+            
+            
+            <div class="about__category">
+              <h3 class="about__category-title">Backend Development & APIs</h3>
+              
+              <div class="row">
+                
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[0]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/python.svg" 
+             alt="Python" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/python.svg" 
+             alt="Python" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          Python - My primary language and expertise (5+ years)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <!-- Backend Development Section -->
-            <div class="c-about-section__category">
-              <h3 class="c-about-section__category-title">Backend Development & APIs</h3>
-              <div class="c-about-section__tech-list">
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/python.svg" alt="Python">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/python.svg" alt="Python">
-                        <div class="tech-description">Python - My primary language and expertise (5+ years)</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[1]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/django.svg" 
+             alt="Django" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/django.svg" 
+             alt="Django" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          Django - My go-to framework for building robust REST APIs
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/django.svg" alt="Django">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/django.svg" alt="Django">
-                        <div class="tech-description">Django - My go-to framework for building robust REST APIs</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[2]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/flask.svg" 
+             alt="Flask" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/flask.svg" 
+             alt="Flask" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          Flask - My choice for lightweight APIs
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/flask.svg" alt="Flask">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/flask.svg" alt="Flask">
-                        <div class="tech-description">Flask - My choice for lightweight APIs</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[3]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/postgresql.svg" 
+             alt="PostgreSQL" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/postgresql.svg" 
+             alt="PostgreSQL" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          PostgreSQL - My preferred database for complex applications
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/postgresql.svg" alt="PostgreSQL">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/postgresql.svg" alt="PostgreSQL">
-                        <div class="tech-description">PostgreSQL - My preferred database for complex applications</div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/mongodb.svg" alt="MongoDB">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/mongodb.svg" alt="MongoDB">
-                        <div class="tech-description">MongoDB - My NoSQL database for flexible data structures</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[4]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/mongodb.svg" 
+             alt="MongoDB" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/mongodb.svg" 
+             alt="MongoDB" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          MongoDB - My NoSQL database for flexible data structures
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
               </div>
             </div>
+          
+            
+            
+            <div class="about__category">
+              <h3 class="about__category-title">Web Development</h3>
+              
+              <div class="row">
+                
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[0]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/javascript.svg" 
+             alt="JavaScript" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/javascript.svg" 
+             alt="JavaScript" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          JavaScript - My core language for full-stack development
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <!-- Web Development Section -->
-            <div class="c-about-section__category">
-              <h3 class="c-about-section__category-title">Web Development</h3>
-              <div class="c-about-section__tech-list">
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/javascript.svg" alt="JavaScript">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/javascript.svg" alt="JavaScript">
-                        <div class="tech-description">JavaScript - My core language for full-stack development</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[1]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/typescript.svg" 
+             alt="TypeScript" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/typescript.svg" 
+             alt="TypeScript" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          TypeScript - My foundation for type-safe frontend development
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/typescript.svg" alt="TypeScript">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/typescript.svg" alt="TypeScript">
-                        <div class="tech-description">TypeScript - My foundation for type-safe frontend development</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[2]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/angular.svg" 
+             alt="Angular" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/angular.svg" 
+             alt="Angular" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          Angular - Professional experience building enterprise apps
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/angular.svg" alt="Angular">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/angular.svg" alt="Angular">
-                        <div class="tech-description">Angular - Professional experience building enterprise apps</div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/react.svg" alt="React">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/react.svg" alt="React">
-                        <div class="tech-description">React - Currently specializing in modern web interfaces</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[3]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/react.svg" 
+             alt="React" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/react.svg" 
+             alt="React" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          React - Currently specializing in modern web interfaces
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
               </div>
             </div>
+          
+            
+            
+            <div class="about__category">
+              <h3 class="about__category-title">Infrastructure & DevOps</h3>
+              
+              <div class="row">
+                
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[0]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/docker.svg" 
+             alt="Docker" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/docker.svg" 
+             alt="Docker" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          Docker - My standard for containerized deployments
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <!-- Infrastructure Section -->
-            <div class="c-about-section__category">
-              <h3 class="c-about-section__category-title">Infrastructure & DevOps</h3>
-              <div class="c-about-section__tech-list">
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/docker.svg" alt="Docker">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/docker.svg" alt="Docker">
-                        <div class="tech-description">Docker - My standard for containerized deployments</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[1]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/aws.svg" 
+             alt="AWS" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/aws.svg" 
+             alt="AWS" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          AWS - My cloud platform of choice for scalable solutions
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/aws.svg" alt="AWS">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/aws.svg" alt="AWS">
-                        <div class="tech-description">AWS - My cloud platform of choice for scalable solutions</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[2]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/git.svg" 
+             alt="Git" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/git.svg" 
+             alt="Git" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          Git - My daily driver for version control and collaboration
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/git.svg" alt="Git">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/git.svg" alt="Git">
-                        <div class="tech-description">Git - My daily driver for version control and collaboration</div>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="c-about-section__tech-item">
-                    <div class="c-about-section__tech-icon">
-                      <div class="c-about-section__tech-front">
-                        <img src="/images/tech/github.svg" alt="GitHub">
-                      </div>
-                      <div class="c-about-section__tech-back">
-                        <img src="/images/tech/github.svg" alt="GitHub">
-                        <div class="tech-description">GitHub - My platform for CI/CD with Actions</div>
-                      </div>
-                    </div>
-                  </div>
+                  <!--bookshop-live name(tech-card/tech-card.jekyll.html) params(tech=tech) context(tech=category.technologies[3]) -->
+<div class="c-tech-card col col-3 col-d-6 col-t-6 col-m-6">
+  <div class="c-tech-card__content">
+    <div class="c-tech-card__icon">
+      <!-- Front side with just the icon -->
+      <div class="c-tech-card__front">
+        <img src="/images/tech/github.svg" 
+             alt="GitHub" 
+             loading="lazy">
+      </div>
+      
+      <!-- Back side with icon (faded) and description -->
+      <div class="c-tech-card__back">
+        <img src="/images/tech/github.svg" 
+             alt="GitHub" 
+             loading="lazy">
+        <div class="c-tech-card__description">
+          GitHub - My platform for CI/CD with Actions
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bookshop-live end-->
                 
               </div>
             </div>
+          
 
-          </div>
-
-          <div class="c-about-section__quick-actions">
-            <p class="c-about-section__quick-actions-intro">You can also check out...</p>
-            <div class="c-about-section__quick-actions-grid">
+          <div class="about__quick-actions">
+            <div class="about__quick-actions-intro">You can also check out...</div>
+            <div class="about__quick-actions-grid">
               
               
-              <a
-                href="https://github.com/lohiermichael"
-                class="c-about-section__action-button"
-                aria-label="View GitHub Profile"
-                target="_blank"
-              >
-                <img
-                  src="/images/quick-actions/github.svg"
-                  alt="" class="icon"
-                >
+              <a href="https://github.com/lohiermichael" class="about__action-button" aria-label="View GitHub Profile" target="_blank">
+                <img src="/images/quick-actions/github.svg" alt="" class="icon">
               </a>
               
               
-              <a
-                href="https://linkedin.com/in/lohiermichael"
-                class="c-about-section__action-button"
-                aria-label="View LinkedIn Profile"
-                target="_blank"
-              >
-                <img
-                  src="/images/quick-actions/linkedin.svg"
-                  alt="" class="icon"
-                >
+              <a href="https://linkedin.com/in/lohiermichael" class="about__action-button" aria-label="View LinkedIn Profile" target="_blank">
+                <img src="/images/quick-actions/linkedin.svg" alt="" class="icon">
               </a>
               
               
-              <a
-                href="/files/resume.pdf"
-                class="c-about-section__action-button"
-                aria-label="Download Resume"
-                target="_blank"
-              >
-                <img
-                  src="/images/quick-actions/resume.svg"
-                  alt="" class="icon"
-                >
+              <a href="/files/resume.pdf" class="about__action-button" aria-label="Download Resume" target="_blank">
+                <img src="/images/quick-actions/resume.svg" alt="" class="icon">
               </a>
               
             </div>
@@ -515,6 +677,7 @@
     </div>
   </div>
 </section>
+<!-- end about -->
 
 <!--bookshop-live end-->
 
