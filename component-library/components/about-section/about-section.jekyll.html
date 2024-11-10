@@ -26,17 +26,6 @@
             </div>
           {% endfor %}
 
-          <div class="about__quick-actions">
-            <div class="about__quick-actions-intro">You can also check out...</div>
-            <div class="about__quick-actions-grid">
-              {% for action in site.data.quick_actions %}
-              {% assign action_data = action[1] %}
-              <a href="{{action_data.url}}" class="about__action-button" aria-label="{{ action_data.aria_label }}" target="_blank">
-                <img src="{{site.baseurl}}/images/quick-actions/{{action_data.local_link}}" alt="" class="icon">
-              </a>
-              {% endfor %}
-            </div>
-          </div>
         </div>
       </div>
     </div>
