@@ -9,7 +9,6 @@ technologies:
   - Python
   - OpenAI
   - Telegram API
-  - MongoDB
   - Docker
 github_url: https://github.com/lohiermichael/telegram-relationship-bot
 content: >-
