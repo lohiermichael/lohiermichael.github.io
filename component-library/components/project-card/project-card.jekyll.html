@@ -2,17 +2,49 @@
 <article class="{{c}} col col-4 col-d-6 col-t-12">
   <div class="{{c}}__content">
     <a href="{{ include.project.url }}" class="{{c}}__image">
-      <img loading="lazy" src="{{ include.project.image }}" alt="{{ include.project.title }}">
+      <img
+        loading="lazy"
+        src="{{site.baseeurl}}{{ include.project.image }}"
+        alt="{{ include.project.title }}">
     </a>
-    <div class="{{c}}__info">
-      <div class="{{c}}__info-wrap">
+
+
+    <div class="{{c}}__overlay">
+      <div class="{{c}}__info">
         <h3 class="{{c}}__title">{{ include.project.title }}</h3>
-      </div>
-      <div class="{{c}}__info-wrap">
-        {% if include.project.subtitle %}
-        <div class="{{c}}__subtitle">{{ include.project.subtitle }}</div>
+        {% if include.project.description %}
+        <div class="{{c}}__description">{{ include.project.description }}</div>
         {% endif %}
       </div>
+
+      {% if include.project.technologies %}
+      <div class="{{c}}__tech-stack">
+        {% for tech in include.project.technologies %}
+          <span class="{{c}}__tech-pill">{{ tech }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if include.project.demo_url or include.project.github_url %}
+      <div class="{{c}}__links">
+        {% if include.project.demo_url %}
+          <a
+            href="{{ include.project.demo_url }}"
+            class="{{c}}__link"
+            target="_blank"
+            rel="noopener"
+          >Live Demo</a>
+        {% endif %}
+        {% if include.project.github_url %}
+          <a
+            href="{{ include.project.github_url }}"
+            class="{{c}}__link"
+            target="_blank"
+            rel="noopener"
+          >GitHub</a>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </article>

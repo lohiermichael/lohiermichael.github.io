@@ -2,7 +2,7 @@
 spec:
   structures: []
   label: Project Card
-  description: Project card used for project lists
+  description: Project card used for project lists with technology stack and links
   icon: wysiwyg
   tags: []
 
@@ -11,16 +11,46 @@ blueprint:
   project:
     title: ""
     subtitle: ""
+    description: ""
     image: ""
     url: ""
+    technologies: []
+    demo_url: ""
+    github_url: ""
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   project:
     title: Hello World
     subtitle: Lorem Ipsum
+    description: A full-stack web application built with modern technologies
     image: https://placekitten.com/800/400
     url: /
+    technologies:
+      - Python
+      - Docker
+      - AWS
+    demo_url: https://demo.example.com
+    github_url: https://github.com/example/repo
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
-_inputs: {}
+_inputs:
+  description:
+    type: markdown
+  technologies:
+    type: array
+    options:
+      values:
+        - Python
+        - JavaScript
+        - TypeScript
+        - React
+        - Node.js
+        - Docker
+        - AWS
+        - MongoDB
+        - PostgreSQL
+  demo_url:
+    type: url
+  github_url:
+    type: url
