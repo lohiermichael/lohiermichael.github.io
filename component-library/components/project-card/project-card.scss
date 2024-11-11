@@ -127,13 +127,44 @@
 		}
 	}
 
-	&__links {
-		display: flex;
-		gap: 16px;
-		opacity: 0;
-		transform: translateY(20px);
-		transition: all .4s ease .3s;
-	}
+
+  .social__link {
+    padding: 8px 16px;
+    border-radius: 24px;
+    background-color: $white;
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .3s ease;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba($white, 0.9);
+      transform: translateY(-2px);
+    }
+  }
+
+  // Delayed animation for GitHub icon
+  &:hover {
+    #{$c}__tech-stack,
+    #{$c}__links,
+    #{$c}__description {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .4s ease .3s;
+  }
+
 
 	&__link {
 		padding: 8px 16px;

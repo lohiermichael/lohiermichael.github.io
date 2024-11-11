@@ -37,11 +37,12 @@
         {% endif %}
         {% if include.project.github_url %}
           <a
+            class="social__link"
             href="{{ include.project.github_url }}"
-            class="{{c}}__link"
             target="_blank"
             rel="noopener"
-          >GitHub</a>
+            aria-label="github icon"
+          ><i class="ion ion-logo-github"></i></a>
         {% endif %}
       </div>
       {% endif %}
