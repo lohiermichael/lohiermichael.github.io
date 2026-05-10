@@ -1,58 +1,25 @@
-name: Jekyll site CI
-
-permissions:
-  contents: write  # Grant write access to contents (necessary for deploying)
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build:
-
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      with:
-        lfs: true     # Enable LFS checkout
-        fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-
-
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '2.7'
-        bundler-cache: true
-
-    - name: Install Jekyll Dependencies
-      run: |
-        cd site
-        bundle install
-
-    - name: Build Bookshop
-      run: |
-        npm install
-        npm run bookshop-hosted
-
-    - name: Build Jekyll Site
-      env:
-        FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }}
-      run: |
-        BUNDLE_GEMFILE=site/Gemfile \
-        bundle exec jekyll build \
-        --source site \
-        --config site/_config.yml
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
-        publish_branch: deploy
-      env:
-        GIT_TRACE: 1
-        GIT_CURL_VERBOSE: 1
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
