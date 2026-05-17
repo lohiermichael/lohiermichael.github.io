@@ -278,8 +278,10 @@ section { padding: 5rem 0; }
 }
 
 .tech-card__front img[src*="flask"],
-.tech-card__back img[src*="flask"] {
-  filter: invert(1) brightness(2);
+.tech-card__back img[src*="flask"],
+.tech-card__front img[src*="django"],
+.tech-card__back img[src*="django"] {
+  filter: brightness(0) invert(1);
 }
 
 .tech-card__back {
