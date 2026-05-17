@@ -277,6 +277,11 @@ section { padding: 5rem 0; }
   object-fit: contain;
 }
 
+.tech-card__front img[src*="flask"],
+.tech-card__back img[src*="flask"] {
+  filter: invert(1) brightness(2);
+}
+
 .tech-card__back {
   transform: rotateY(180deg);
   background: rgba(0, 201, 184, 0.08);
